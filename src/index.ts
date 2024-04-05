@@ -11,3 +11,10 @@ const users: Users = {
 };
 
 console.log(users);
+
+const userMap = new Map<string, User>();
+
+userMap.set("musab", { name: "musab", email: "musab@gmail.com" });
+userMap.set("hassan", { name: "hassan", email: "hassan@gmail" });
+
+console.log(userMap);
