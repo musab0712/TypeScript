@@ -1,14 +1,13 @@
 interface User {
-  id: number;
   name: string;
-  age: number;
   email: string;
 }
 
-type UpdateUser = Pick<User, "name" | "email">;
+type Users = Record<string, User>;
 
-const displayUserProfile = (user: UpdateUser) => {
-  console.log(`Name: ${user.name}, Email: ${user.email}`);
+const users: Users = {
+  musab: { name: "musab", email: "musab@gmail.com" },
+  hassan: { name: "hassan", email: "hassan@gmail" },
 };
 
-displayUserProfile({ name: "musab", email: "musab@gmail.com" });
+console.log(users);

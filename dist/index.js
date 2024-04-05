@@ -1,5 +1,6 @@
 "use strict";
-const displayUserProfile = (user) => {
-    console.log(`Name: ${user.name}, Email: ${user.email}`);
+const users = {
+    musab: { name: "musab", email: "musab@gmail.com" },
+    hassan: { name: "hassan", email: "hassan@gmail" },
 };
-displayUserProfile({ name: "musab", email: "musab@gmail.com" });
+console.log(users);
