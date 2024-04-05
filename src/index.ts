@@ -1,18 +1,14 @@
 interface User {
+  id: number;
   name: string;
   age: number;
+  email: string;
 }
 
-function sumOfAge(user1: User, user2: User) {
-  return user1.age + user2.age;
-}
+type UpdateUser = Pick<User, "name" | "email">;
 
-const result = sumOfAge(
-  {
-    name: "Musab",
-    age: 24,
-  },
-  { name: "Hassan", age: 25 }
-);
+const displayUserProfile = (user: UpdateUser) => {
+  console.log(`Name: ${user.name}, Email: ${user.email}`);
+};
 
-console.log(result);
+displayUserProfile({ name: "musab", email: "musab@gmail.com" });
